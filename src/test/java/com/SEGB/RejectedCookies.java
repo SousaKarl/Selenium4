@@ -54,7 +54,6 @@ public class RejectedCookies {
 					if (cookie_settings.isDisplayed() && cookie_settings.isEnabled())
 					{
 						System.out.println("Cookie settings buttons is displayed");
-						System.out.println("Test");
 						
 						driver.close();
 						 
