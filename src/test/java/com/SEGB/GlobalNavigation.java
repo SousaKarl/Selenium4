@@ -7,6 +7,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class GlobalNavigation {
@@ -36,16 +38,25 @@ public class GlobalNavigation {
 		for (int i=0; i<global_navigation.size(); i++)
 			
 		{
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+			
+			//wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='segb-flexinav__navs']//nav[@aria-label='global navigation']//li")));
+			//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='segb-flexinav__navs']//nav[@aria-label='global navigation']//li")));
+			
+			wait.until(ExpectedConditions.visibilityOfAllElements(global_navigation.get(i)));
+			
 			if(global_navigation.get(i).isDisplayed() && global_navigation.get(i).isEnabled())
 			{
 				
 				System.out.println("The link names are :" +global_navigation.get(i).getText());
 				
 				
+				
 			}
+			
 		}
 		
-		
+		driver.close();
 		
 	}
 
