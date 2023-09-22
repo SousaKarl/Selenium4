@@ -42,6 +42,7 @@ public class RedirectPopup1 {
 			if (redirect_close.isDisplayed() && redirect_close.isEnabled())
 			{
 				System.out.println("The X button is present ");
+				redirect_close.click();
 			}
 		}
 		
