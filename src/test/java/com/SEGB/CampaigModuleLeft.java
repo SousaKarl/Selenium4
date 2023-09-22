@@ -32,7 +32,7 @@ public class CampaigModuleLeft {
 		
 		if (campaign_image_right.isDisplayed())
 		{
-			System.out.println("The image is dislayed on the Right side");
+			System.out.println("The image is dislayed on the left side");
 		}
 		
 		else
